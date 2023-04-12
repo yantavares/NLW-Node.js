@@ -1,5 +1,7 @@
 import express from "express";
 
+import "./database";
+
 const app = express();
 
 app.get("/", (request, response) => {
@@ -17,4 +19,5 @@ app.post("/", (request, response) => {
     test: "JSON carregado",
   });
 });
+
 app.listen(3333, () => console.log("DEU BOM"));

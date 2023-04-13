@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { getCustomRepository } from "typeorm";
 import { MessageService } from "../services/MessageService";
 
 class MessagesController {

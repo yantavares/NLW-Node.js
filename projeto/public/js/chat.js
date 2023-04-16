@@ -31,8 +31,9 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
   });
 
   socket.on("client_list_all_messages", (messages) => {
-    var template_client = document.getElementById("message-user-template")
-      .innerHTML;
+    var template_client = document.getElementById(
+      "message-user-template"
+    ).innerHTML;
     var template_admin = document.getElementById("admin-template").innerHTML;
 
     messages.forEach((message) => {
@@ -78,8 +79,9 @@ document
 
     socket.emit("client_send_to_admin", params);
 
-    const template_client = document.getElementById("message-user-template")
-      .innerHTML;
+    const template_client = document.getElementById(
+      "message-user-template"
+    ).innerHTML;
 
     const rendered = Mustache.render(template_client, {
       message: text.value,

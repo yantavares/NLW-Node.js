@@ -19,7 +19,7 @@ class MessagesController {
     const { id } = request.params;
     const messagesService = new MessageService();
 
-    const list = await messagesService.listByUSer(id);
+    const list = await messagesService.listByUser(id);
 
     return response.json(list);
   }
